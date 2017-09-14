@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>记住上一次用户名</title>
+	<script>
+		function setCookie(name, value, iDay){
+			var oDate= new Date();
+
+			oDate.setDate(oDate.getDate()+iDay);
+
+			document.cookie=name+'='+value+'; expires='+oDate;
+
+		}
+
+		function getCookie(name){
+			var arr=document.cookie.split('; ');
+
+			for(var i=0; i < arr.length; i++){
+				var arr2=arr[i].split('=');
+				if(arr2[0]==name){
+					return arr2[1];
+				}
+			}
+
+			return '';
+		}
+
+		function removeCookie(name){
+			setCookie(name, 1, -1);
+		}
+
+
+
+		window.onload=function () {
+			var oForm=document.getElementById('form1');
+			var oUser=document.getElementsByName('user')[0];
+
+			oForm.onsubmit=function(){
+				setCookie('user', oUser.value, 14);
+			}
+
+			oUser.value=getCookie('user');
+		}
+	</script>
+</head>
+<body>
+	<form id="form1" action="http://www.zhinengshe.com/">
+		user name: <input type="text" name="user"/><br>
+		password: <input type="password" name="pass"/><br>
+		<input type="submit" value="anmelden">
+	</form>
+</body>
+</html>

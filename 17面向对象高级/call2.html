@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>call2</title>
+	<script>
+		function show(a, b){
+			alert('this is: ' + this + '\na is:' + a + '\nb is: ' + b);
+		}
+
+		//show(12,5);
+
+		show.call('abc', 12, 5);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

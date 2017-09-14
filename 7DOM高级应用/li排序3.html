@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>li排序3</title>
+
+	<style>
+		#ul1 {background: green;}
+		#ul2 {background: yellow;}
+	</style>
+
+	<script>
+		window.onload=function(){
+		 var oUl1=document.getElementById('ul1');
+		 var oUl2=document.getElementById('ul2');
+		 var oBtn1=document.getElementById('btn1');
+
+		 oBtn1.onclick=function(){
+		 	var oLi=oUl1.children[0];
+
+		 	//oUl1.removeChild(oLi);
+		 	oUl1.appendChild(oLi); //1.先把元素从原有的父级删掉 2.添加到新的父级
+		 }
+		};
+	</script>
+</head>
+<body>
+	<ul id="ul1">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+
+	<input id="btn1" type="button" value="移动"/>
+
+	
+</body>
+</html>
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+
+	function createPerson(name,qq){ //构造函数
+		//原料
+		var obj = new Object();
+
+		//加工
+		obj.name=name;
+		obj.qq=qq;
+
+		obj.showName = function(){
+			alert('my name is '+ this.name);
+		};
+
+		obj.showQQ= function(){
+			alert('my qq is '+ this.qq);
+		};
+
+		//出厂
+		return obj;
+	}
+
+	var obj=createPerson('li si', '11111111');
+	var obj2=createPerson('wang su', '2222222');
+
+	obj.showName();
+	obj.showQQ();
+
+	obj2.showName();
+	obj2.showQQ();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

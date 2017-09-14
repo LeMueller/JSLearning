@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>闭包</title>
+	<script>
+
+		function aaa(){//父函数
+			var a=12; 
+			
+			function bbb(){//子函数，可以使用父函数的变量
+				alert(a);
+			}
+			bbb();
+		}
+
+		aaa();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>匀速运动</title>
+	<style>
+		#div1 {width:100px; height:100px; background: red; position: absolute; left: 500px; top: 50px;}
+		#div2 {width: 1px; height: 300px; position: absolute; left: 300px; top: 0px; background: black;}
+		#div3 {width: 1px; height: 300px; position: absolute; left: 100px; top: 0px; background: black;}
+	</style>
+	<script>
+
+	var timer = null; 
+
+		function startMove(iTarget){
+			var oDiv = document.getElementById('div1');
+
+			clearInterval(timer);
+
+			timer=setInterval(function(){
+				var speed=0;
+
+				if(oDiv.offsetLeft<iTarget){
+					speed=7;
+				}else{
+					speed=-7;
+				}
+
+				if(Math.abs(iTarget-oDiv.offsetLeft)<=7){
+					clearInterval(timer);
+
+					oDiv.style.left=iTarget+'px';
+				}else{
+					oDiv.style.left=oDiv.offsetLeft+speed+'px';
+				}
+
+				
+
+				document.title=oDiv.offsetLeft+','+speed;
+			},30);
+		}
+	</script>
+</head>
+<body>
+
+	<input type="button" name="to 100" value="to 100" onclick="startMove(100)">
+	<input type="button" name="to 300" value="to 300" onclick="startMove(300)">
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div id="div3"></div>
+	
+</body>
+</html>

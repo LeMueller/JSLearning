@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>月历</title>
+
+<style type="text/css">
+	#txt1 {width: 200px; height: 150px; border: 1px solid black}
+</style>
+
+<script type="text/javascript">
+
+window.onload=function(){
+
+	oDivM=document.getElementById('month');
+	oBtn=oDivM.getElementsByTag('input');
+
+	oDivI=document.getElementById('inhalt');
+	oTxt=oDivI.getElementById('txt1');
+	
+	//for(i=0; i<oBtn.lenght; i++){
+	//	oBtn[i].index=i;
+
+	//	oBtn[i].onclick=function(){
+		//oDiv.innerHTML=oTxt.value;
+	//	alert(this.index);
+	//	}
+	//}
+
+	oBtn1=document.getElementById('btn1');
+	oBtn1.onclick=function(){
+		alert('asdfa');
+	}
+	
+
+};
+
+
+
+</script>
+
+</head>
+
+<body>
+
+<div id="calender">
+
+	<div id="month" class="monthCub">
+		<input id="btn1" type="button" value="1 JAN" />
+		<input id="btn2" type="button" value="2 FER" />
+		<input id="btn3" type="button" value="3 MAR" />
+		<br>
+		<input id="btn4" type="button" value="4 APR" />
+		<input id="btn5" type="button" value="5 MAY" />
+		<input id="btn6" type="button" value="6 JUN" />
+		<br>
+		<input id="btn7" type="button" value="7 JUL" />
+		<input id="btn8" type="button" value="8 AUG" />
+		<input id="btn9" type="button" value="9 SEP" />
+		<br>
+		<input id="btn10" type="button" value="10 OCT" />
+		<input id="btn11" type="button" value="11 NOV" />
+		<input id="btn12" type="button" value="12 DEC" />
+		<br>
+	</div>
+
+	<div id="inhalt">
+		<input id="txt1" type="text">
+	</div>
+
+</div>
+
+</body>
+</html>
