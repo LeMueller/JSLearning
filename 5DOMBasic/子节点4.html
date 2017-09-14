@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>子节点4</title>
+	<script>
+		window.onload=function(){
+			var oUl=document.getElementById('ul1');
+
+			//alert(oUl.childNodes.length);
+			alert(oUl.children.length);
+			for(var i=0; i<oUl.children.length; i++){
+				//nodeType = 3 文本节点
+				//nodeType = 1 元素节点
+				//alert(oUl.childNodes[i].nodeType);
+				
+				oUl.children[i].style.background='red';
+			}
+		}
+	</script>
+</head>
+<body>
+	<ul id="ul1">
+		<li>
+			abcdefg
+			<span></span>
+		</li>
+		<li></li>
+	</ul>
+</body>
+</html>

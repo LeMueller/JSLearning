@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>取非行间样式3</title>
+	<style>
+		div {width:400px;}
+		#div1{width:200px; height:200px; background: red;}
+	</style>
+	<script>
+	function getStyle(obj, name){
+		if (obj.currentStyle){
+			return obj.currentStyle[name];
+		}else{
+			return obj.getComputedStyle(obj, false)[name];
+		}
+
+	}
+		window.onload=function(){
+			var oDiv=document.getElementById('div1');
+
+			/*
+			if (oDiv.currentStyle){
+				alert(oDiv.currentStyle.wdth);
+			}else{
+				alert(getComputedStyle(oDiv, false).width);
+			}
+			*/
+
+			alert(getStyle(oDiv,'width')); //不行
+
+		}
+	</script>
+</head>
+<body>
+	<div id="div1">
+</body>
+</html>

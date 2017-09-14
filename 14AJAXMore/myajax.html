@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload=function(){
+			var oBtn=document.getElementById('btn1');
+			oBtn.onclick=function(){
+				//1.创建ajax对象
+				//非IE6
+				//var oAjax=new XMLHttpRequest();
+
+				//IE6
+				var oAjax=new ActiveXobject("Microsoft.XMLHTTP");
+			}
+		}
+	</script>
+</head>
+<body>
+	<input id="btn1" type="button" value="read">
+</body>
+</html>

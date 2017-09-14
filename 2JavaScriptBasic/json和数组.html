@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>json和数组</title>
+	<script>
+		var json={a:12, b:5, c:7};
+		var arr=[12,5,7];
+/**
+		alert(json.a);
+		alert(json['a']);//方括号可以代替.
+		alert(arr[0]);
+**/
+		//alert(arr.length);
+		//alert(json.length);//json没有length
+		
+		//关于循环
+		/*
+		for (var i = 0; i < arr.length; i++) {
+			alert('No. '+i+': '+arr[i]);
+		}*/
+		/*
+		for(var i in arr){
+			alert('No. '+i+': '+arr[i]);
+		}*/
+		for(var i in json){
+			alert('No. '+i+': '+json[i]);
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

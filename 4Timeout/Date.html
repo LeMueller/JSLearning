@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Date</title>
+	<script>
+		var oDate=new Date();
+
+		/**
+		alert(oDate.getHours());
+		alert(oDate.getMinutes());
+		alert(oDate.getSeconds());
+		**/
+		var hours = oDate.getHours();
+		var minutes= oDate.getMinutes();
+		var seconds = oDate.getSeconds();
+
+		var time=hours.toSring()+minutes.toSring()+seconds.toSring();
+
+		alert(hours);
+		alert(minutes);
+		//alert(time);
+		alert(typeof(time));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

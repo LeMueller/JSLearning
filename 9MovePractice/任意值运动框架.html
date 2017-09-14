@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>去掉offset</title>
+	<style>
+		div {width: 200px; height: 200px; margin-left: 20px; float:left; background:yellow; border:10px solid black; font-size: 14px; filter: alpha(opacity: 30);opacity: 0.3;}
+	</style>
+	<script>
+	window.onload=function(){
+		var oDiv1=document.getElementById('div1');
+		
+
+		oDiv1.onmouseover=function(){
+			startMove(this, 'opacity', 400);
+		}
+		oDiv1.onmouseout=function(){
+			startMove(this, 'opacity', 200);
+		}
+
+		
+	}
+
+
+
+
+		function startMove(obj,attr,iTarget){
+
+			clearInterval(obj.timer)
+			obj.timer = setInterval(function(){
+
+				var cur=parseInt(getStyle(obj, attr));
+
+				var speed=(iTarget-cur)/6;
+
+				speed=speed>0? Math.ceil(speed):Math.floor(speed);
+
+				if(cur==iTarget){
+					clearInterval(obj.timer);
+				}else{
+					obj.style[attr]=cur+speed+'px';
+				}
+
+
+			},30)
+		}
+
+		/*function startMove2(obj, iTarget){
+
+			clearInterval(obj.timer)
+			obj.timer = setInterval(function(){
+				var speed=(iTarget-obj.offsetWidth)/6;
+				speed=speed>0? Math.ceil(speed):Math.floor(speed);
+
+				if(obj.offsetWidth==iTarget){
+					clearInterval(obj.timer);
+				}else{
+					obj.style.width=obj.offsetWidth+speed+'px';
+				}
+
+
+			},30)
+		}*/
+
+		function getStyle(obj, name){
+		if(obj.currentStyle){
+			return obj.currentStyle[name];
+		}else{
+			return getComputedStyle(obj, false)[name];
+		}
+	}
+
+		
+	</script>
+</head>
+<body>
+	<div id="div1"></div>
+
+</body>
+</html>
