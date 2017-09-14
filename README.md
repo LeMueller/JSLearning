@@ -1,3 +1,3 @@
 # JSLearning
 
-Javsscript learning form 智能社
+Javsscript learning by 智能社
